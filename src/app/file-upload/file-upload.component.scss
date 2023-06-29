@@ -1,0 +1,33 @@
+.file-input {
+  display: none;
+}
+.file-upload {
+  padding-top: 4px;
+  margin: 10px;
+}
+.frame{    
+  margin: 40px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  //   height: 200px;
+}
+.tbl{
+    // width: 200px;
+    margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+}
+.image-css {
+  background-image: url("../../assets/LH-logo.jpg");
+  background-size: cover;
+  height: 200px;
+  margin: 450px;
+  margin-top: 0;
+  margin-bottom: 0;
+}

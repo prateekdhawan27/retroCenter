@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+// Functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Required Bootstrap imports
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Variable overrides second
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+@import '@angular/material/theming';
+// Plus imports for other components in your app.
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ai-retro-center-primary: mat-palette($mat-indigo);
+$ai-retro-center-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$app-theme: mat-light-theme($ai-retro-center-primary, $ai-retro-center-accent);
+
+// The warn palette is optional (defaults to red).
+$ai-retro-center-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ai-retro-center-theme: mat-light-theme($ai-retro-center-primary, $ai-retro-center-accent, $ai-retro-center-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ai-retro-center-theme);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
